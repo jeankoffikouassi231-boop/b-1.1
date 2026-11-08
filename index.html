@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversaire d'Amour - Bity Dahon Triphène Ashley Erica 💖✨</title>
+    <style>
+        :root {
+            --letter: rgba(30, 10, 25, 0.96);
+            --gold: #ffdf70;
+            --rose: #ff3381;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #3a0a32 0%, #170219 70%, #050006 100%);
+            color: #fff;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px 15px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .page-card {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .main-signature-box {
+            background: linear-gradient(135deg, rgba(255, 51, 129, 0.25), rgba(255, 223, 112, 0.2));
+            border: 2px solid var(--gold);
+            padding: 12px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 25px rgba(255, 51, 129, 0.6);
+            animation: pulse 2s infinite alternate;
+        }
+
+        .main-signature-box span {
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 0 0 12px rgba(255, 223, 112, 0.9);
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            background: linear-gradient(45deg, #ffe29f, #ffa99f, #ff719a, #ffe29f);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.1rem;
+            margin: 0 0 5px 0;
+            filter: drop-shadow(0 0 15px rgba(255, 113, 154, 0.7));
+            animation: shine 4s linear infinite;
+        }
+
+        .for-my-love {
+            font-size: 1.05rem;
+            color: #ff99c8;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            text-shadow: 0 0 12px rgba(255, 157, 200, 0.9);
+        }
+
+        .name-title {
+            font-size: 1.1rem;
+            color: var(--gold);
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            text-shadow: 0 0 18px rgba(255, 223, 112, 0.9);
+            line-height: 1.4;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            color: #e2b6ce;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .time-box {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.03));
+            border: 1px solid rgba(255, 51, 129, 0.6);
+            padding: 12px 8px;
+            border-radius: 12px;
+            min-width: 55px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .time-box label {
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            color: var(--gold);
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .Love_You {
+            width: 100%;
+            background: var(--letter);
+            border: 2.5px solid rgba(255, 223, 112, 0.7);
+            border-radius: 20px;
+            padding: 22px 18px;
+            box-shadow: 0 0 40px rgba(255, 51, 129, 0.5), 0 15px 35px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(12px);
+            position: relative;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .Love_You::before {
+            content: "👑💖😍💋💘🥰🧸🤍🎁";
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.1rem;
+            background: #170219;
+            padding: 0 10px;
+            border-radius: 50%;
+        }
+
+        .Love_You p {
+            color: #fff0f5;
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin: 0;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+        }
+
+        /* STYLE DES PAGES DE MESSAGES AVEC FOND D'ÉMOJIS COMPLET */
+        .message-card {
+            display: none;
+            width: 100%;
+            max-width: 420px;
+            background: linear-gradient(135deg, rgba(40, 8, 35, 0.94), rgba(20, 2, 18, 0.94));
+            border: 3px solid var(--gold);
+            border-radius: 30px;
+            padding: 25px 18px;
+            box-shadow: 0 0 50px rgba(255, 51, 129, 0.6), inset 0 0 25px rgba(255, 223, 112, 0.3);
+            backdrop-filter: blur(15px);
+            box-sizing: border-box;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .message-card::before {
+            content: "💖 💋 😍 💕 🌹 👑 💍 ✨ 💌 💘 💖 💋 😍 💕 🌹 👑 💍 ✨ 🌟 🎁 🔥 🥰 👑 💖 💋 😍 💕 🌹 👑 💍 ✨ 💌 💘 💖 💋 😍 💕 🌹 👑 💍 ✨ 💌 💘 💖 💋 😍 💕 🌹 👑 💍 ✨ 🌟 🎁 🔥 🥰 👑 💖 💋 😍 💕 🌹 👑 💍 ✨ 💌 💘";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            font-size: 1.8rem;
+            opacity: 0.12;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .sticker-badge {
+            background: linear-gradient(45deg, #ff3381, #ff719a, #ffdf70);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 20px rgba(255, 51, 129, 0.8);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .msg-title {
+            font-family: 'Georgia', serif;
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            text-shadow: 0 0 15px rgba(255, 223, 112, 0.8);
+        }
+
+        .msg-body {
+            color: #fff5f8;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 15px;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.9);
+        }
+
+        .love-sticker-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px dashed rgba(255, 223, 112, 0.8);
+            border-radius: 15px;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-weight: bold;
+            box-shadow: inset 0 0 15px rgba(255, 51, 129, 0.3);
+            text-shadow: 0 0 10px rgba(255, 223, 112, 0.6);
+        }
+
+        .btn-amour {
+            background: linear-gradient(45deg, #ff3381, #ff85a2, #ffdf70);
+            background-size: 200% auto;
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(255, 51, 129, 0.8);
+            transition: all 0.3s;
+            animation: shine 3s linear infinite;
+            width: 100%;
+        }
+
+        .btn-amour:active {
+            transform: scale(0.95);
+        }
+
+        .btn-surprise-suspense {
+            background: linear-gradient(45deg, #ff0055, #ffcc00, #ff00ab);
+            background-size: 200% auto;
+            animation: pulse-surprise 0.8s infinite alternate, shine 2s linear infinite !important;
+            box-shadow: 0 0 40px #ff0055, 0 0 20px #ffcc00 !important;
+            font-size: 1.05rem !important;
+            border: 2px solid #ffffff !important;
+        }
+
+        .btn-retour-home {
+            margin-top: 12px;
+            background: transparent;
+            color: var(--gold);
+            border: 1px dashed var(--gold);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        /* STYLE BOÎTE CADEAU */
+        .gift-box-container {
+            cursor: pointer;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed var(--gold);
+            border-radius: 20px;
+            margin: 15px 0;
+            transition: transform 0.3s;
+        }
+        .gift-box-container:hover {
+            transform: scale(1.05);
+        }
+        .gift-icon {
+            font-size: 4rem;
+            animation: bounceGift 1s infinite alternate;
+        }
+
+        /* STYLE DES 5 CARREAUX DE CHOIX */
+        .grid-gifts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+            max-height: 50vh;
+            overflow-y: auto;
+        }
+        .gift-carreau {
+            background: linear-gradient(135deg, rgba(255, 51, 129, 0.2), rgba(255, 223, 112, 0.15));
+            border: 2px solid rgba(255, 223, 112, 0.5);
+            padding: 12px;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+        }
+        .gift-carreau:hover {
+            background: linear-gradient(135deg, rgba(255, 51, 129, 0.4), rgba(255, 223, 112, 0.3));
+            border-color: var(--gold);
+            transform: scale(1.02);
+        }
+        .gift-carreau.selected {
+            background: linear-gradient(45deg, #00b09b, #96c93d) !important;
+            border-color: #fff !important;
+            box-shadow: 0 0 20px #00b09b;
+        }
+
+        #validation-message {
+            display: none;
+            background: linear-gradient(135deg, #ff007f, #7928ca);
+            border: 2px solid #fff;
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 0 30px #ff007f;
+            animation: popSurprise 0.5s ease;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.9; }
+            100% { transform: scale(1.05); opacity: 1; }
+        }
+
+        @keyframes pulse-surprise {
+            0% { transform: scale(1); box-shadow: 0 0 25px #ff0055; }
+            100% { transform: scale(1.08); box-shadow: 0 0 50px #ffcc00, 0 0 30px #ff0055; }
+        }
+
+        @keyframes bounceGift {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-10px) scale(1.1); }
+        }
+
+        @keyframes popSurprise {
+            0% { transform: scale(0.3); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE ACCUEIL : COMPTEUR & SIGNATURE K.M-9 -->
+    <div id="page-0" class="page-card">
+        <div class="main-signature-box">
+            <span>✨ DE LA PART DE K.M-9 ❤💋💌 ✨</span>
+        </div>
+        
+        <h1>Joyeux Anniversaire</h1>
+        <div class="for-my-love">✨ 💌 Je t'aime mon amour 😍 💌 ✨</div>
+        <div class="name-title">👑✨ Bity Dahon Triphène Ashley Erica ✨👑</div>
+        <div class="subtitle">🌹 Notre Histoire Magique • Depuis le 25 mai 2025 🌹</div>
+
+        <div class="countdown">
+            <div class="time-box">
+                <span>364</span>
+                <label>Jours ⏳</label>
+            </div>
+            <div class="time-box">
+                <span>18</span>
+                <label>Heures 💖</label>
+            </div>
+            <div class="time-box">
+                <span>13</span>
+                <label>Min ✨</label>
+            </div>
+            <div class="time-box">
+                <span>18</span>
+                <label>Sec 🔥</label>
+            </div>
+        </div>
+
+        <div class="Love_You">
+            <p>
+                « Chaque seconde écoulée à tes côtés est un trésor inestimable 💎. Tu es mon endroit préféré au monde et l'amour absolu de ma vie entière. Je t'aime mon amour à la folie 😍 💖 💕 🔥 🧸 🎁 » 
+            </p>
+        </div>
+
+        <button class="btn-amour" onclick="allerPage(1)">
+            💌 Ouvrir le Sticker Message 1 / 10 ✨💖😍
+        </button>
+    </div>
+
+    <!-- MESSAGES 1 À 10 -->
+    <div id="page-1" class="message-card">
+        <div class="sticker-badge">💌 STICKER D'AMOUR 1 / 10 💌</div>
+        <div class="msg-title">Mon Amour Éternel ✨</div>
+        <div class="msg-body">« Je t'aime plus que les mots ne pourront jamais l'exprimer. Tu es la plus belle étoile qui illumine toute ma vie chaque jour qui passe. »</div>
+        <div class="love-sticker-box">😍 Je t'aime mon amour ! 💖💘💋🥰</div>
+        <button class="btn-amour" onclick="allerPage(2)">Sticker Suivant (2/10) ➔ 💌</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <div id="page-2" class="message-card">
+        <div class="sticker-badge">💌 STICKER D'AMOUR 2 / 10 💌</div>
+        <div class="msg-title">Ma Reine Précieuse 👑</div>
+        <div class="msg-body">« À tes côtés, chaque journée devient un conte de fées magique. Ton sourire fait vibrer mon cœur de bonheur absolu. »</div>
+        <div class="love-sticker-box">😍 Je t'aime mon amour ! 💕👑✨🥰</div>
+        <button class="btn-amour" onclick="allerPage(3)">Sticker Suivant (3/10) ➔ 💌</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <div id="page-3" class="message-card">
+        <div class="sticker-badge">💌 STICKER D'AMOUR 3 / 10 💌</div>
+        <div class="msg-title">Mon Âme Sœur 💍</div>
+        <div class="msg-body">« Bity Dahon Triphène Ashley Erica, tu es mon plus beau trésor, mon évidence absolue et tout mon avenir radieux. »</div>
+        <div class="love-sticker-box">😍 Je t'aime mon amour ! ♾️💍💖🤍</div>
+        <button class="btn-amour" onclick="allerPage(4)">Sticker Suivant (4/10) ➔ 💌</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <div id="page-4" class="message-card">
+        <div class="sticker-badge">💌 STICKER D'AMOUR 4 / 10 💌</div>
+        <div class="msg-title">Ma Douce Passion 🌹</div>
+        <div class="msg-body">« Chaque seconde sans toi semble une éternité, et chaque instant dans tes bras est un pur paradis sur terre. »</div>
+        <div class="love-sticker-box">😍 Je t'aime mon amour ! 🔥💋💘🥰</div>
+        <button class="btn-amour" onclick="allerPage(5)">Sticker Suivant (5/10) ➔ 💌</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <div id="page-5" class="message-card">
+        <div class="sticker-badge">💌 STICKER D'AMOUR 5 / 10 💌</div>
+        <div class="msg-title">Mon Inspiration 💎</div>
+        <div class="msg-body">« Ta présence me donne la force d'accomplir de grandes choses. Tu es la plus belle motivation de toute ma vie. »</div>
+        <div class="love-sticker-box">😍 Je t'aime mon amour ! ✨💎💖🤍</div>
+        <button class="btn-amour" onclick="allerPage(6)">Sticker Suivant (6/10) ➔ 💌</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <div id="page-6" class="message-card">
+        <div class="sticker-badge">💌 STICKER D'AMOUR 6 / 10 💌</div>
+        <div class="msg-title">Mon Havre de Paix 🏰</div>
+        <div class="msg-body">« Dans tes bras, je trouve le refuge parfait et une sérénité infinie. Tu es mon véritable chez-moi pour toujours. »</div>
+        <div class="love-sticker-box">😍 Je t'aime mon amour ! 💗🏰✨🥰</div>
+        <button class="btn-amour" onclick="allerPage(7)">Sticker Suivant (7/10) ➔ 💌</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <div id="page-7" class="message-card">
+        <div class="sticker-badge">💌 STICKER D'AMOUR 7 / 10 💌</div>
+        <div class="msg-title">Mon Étoile Brillante 🌟</div>
+        <div class="msg-body">« Tu remplis mes jours et mes nuits d'une lumière si douce et d'un amour si pur. Merci d'exister pour moi. »</div>
+        <div class="love-sticker-box">😍 Je t'aime mon amour ! 🌟💫💘🤍</div>
+        <button class="btn-amour" onclick="allerPage(8)">Sticker Suivant (8/10) ➔ 💌</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <div id="page-8" class="message-card">
+        <div class="sticker-badge">💌 STICKER D'AMOUR 8 / 10 💌</div>
+        <div class="msg-title">Mon Unique Battement 💓</div>
+        <div class="msg-body">« Mon cœur ne bat que pour toi, avec la même passion et la même intensité folle qu'au premier regard. »</div>
+        <div class="love-sticker-box">😍 Je t'aime mon amour ! 💖🔥💋🥰</div>
+        <button class="btn-amour" onclick="allerPage(9)">Sticker Suivant (9/10) ➔ 💌</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <div id="page-9" class="message-card">
+        <div class="sticker-badge">💌 STICKER D'AMOUR 9 / 10 💌</div>
+        <div class="msg-title">Mon Choix Pour La Vie ♾️</div>
+        <div class="msg-body">« Si je devais revivre mille fois ma vie, je te choisirais encore et toujours sans hésiter une seule seconde. »</div>
+        <div class="love-sticker-box">😍 Je t'aime mon amour ! ♾️💍🌹🤍</div>
+        <button class="btn-amour" onclick="allerPage(10)">Dernier Message (10/10) ➔ 🎁</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <div id="page-10" class="message-card">
+        <div class="sticker-badge">💌 STICKER ULTIME 10 / 10 💌</div>
+        <div class="msg-title">Pour Toujours Et À Jamais 👑</div>
+        <div class="msg-body">« Bity Dahon Triphène Ashley Erica, mon amour pour toi n'a aucune limite. Je t'aime à la folie aujourd'hui, demain et pour toute l'éternité ! »</div>
+        <div class="love-sticker-box">😍 JE T'AIME MON AMOUR ENCORE ET POUR TOUJOURS ! 💖💘👑💍✨🧸🥰🤍</div>
+        <button class="btn-amour btn-surprise-suspense" onclick="allerPage(11)">🎁 ⚡ TOUCHE ICI POUR TA SURPRISE MAGIQUE ! ⚡ 🎁</button>
+        <button class="btn-retour-home" onclick="allerPage(0)">🏠 Accueil Compteur</button>
+    </div>
+
+    <!-- PAGE 11 : QUESTION CADEAU -->
+    <div id="page-11" class="message-card">
+        <div class="sticker-badge">🎉 SURPRISE ULTIME BITY 🎁</div>
+        <div class="msg-title">✨ Ma Question Pour Toi ✨</div>
+        <div class="msg-body" style="font-size: 1.15rem; font-weight: bold; color: #ffdf70;">
+            « QU'EST-CE QUE TU VEUX COMME CADEAUX MON AMOUR ? 🎁💝💍✨ »
+        </div>
+        <div class="love-sticker-box">
+            😍 Touche sur la boîte mystère ci-dessous pour découvrir tes options magiques ! 💖🌹👑🥰🎆
+        </div>
+        
+        <div class="gift-box-container" onclick="allerPage(12)">
+            <div class="gift-icon">🎁✨</div>
+            <div style="font-size: 0.9rem; color: var(--gold); font-weight: bold;">Clique pour ouvrir ton cadeau ! 🎆</div>
+        </div>
+
+        <button class="btn-retour-home" onclick="allerPage(10)">⬅️ Message Précédent</button>
+    </div>
+
+    <!-- PAGE 12 : LES CHOIX DE CADEAUX -->
+    <div id="page-12" class="message-card">
+        <div class="sticker-badge">🎆 FEUX D'ARTIFICES D'AMOUR 🎆</div>
+        <div class="msg-title">✨ Choisis tes 2 Cadeaux ! ✨</div>
+        <div style="font-size: 0.85rem; color: #ff99c8; margin-bottom: 10px;">
+            Sélectionne maximum <strong style="color:var(--gold);">2 cases</strong> mon cœur 💕 (<span id="compteur-choix">0</span>/2)
+        </div>
+
+        <div class="grid-gifts">
+            <div class="gift-carreau" onclick="selectionnerCarreau(this)">
+                1️⃣ Un Parfum + Une Chaîne 🌸💎
+            </div>
+            <div class="gift-carreau" onclick="selectionnerCarreau(this)">
+                2️⃣ Une Soirée Romantique 🍷✨
+            </div>
+            <div class="gift-carreau" onclick="selectionnerCarreau(this)">
+                3️⃣ Une Balade Romantique + Love Intense 🌙🔥
+            </div>
+            <div class="gift-carreau" onclick="selectionnerCarreau(this)">
+                4️⃣ Cadeau Surprise + Une Soirée Romantique Intense 🎁🌹
+            </div>
+            <div class="gift-carreau" onclick="selectionnerCarreau(this)">
+                5️⃣ Love Intense + Tout est permis 🔥💋👑
+            </div>
+        </div>
+
+        <div id="validation-message">
+            EXCELLENT CHOIX BÆ ❤💋✨🎉😘
+        </div>
+
+        <div style="margin-top: 15px; font-size: 0.85rem; color: var(--gold); font-weight: bold;">
+            ✨ DE LA PART DE K.M-9 ❤💋💌 ✨
+        </div>
+
+        <button class="btn-amour" style="margin-top: 15px;" onclick="allerPage(0)">
+            🔄 Revenir au début de l'amour ✨
+        </button>
+    </div>
+
+    <!-- Script de navigation -->
+    <script>
+        let choixFait = 0;
+
+        function allerPage(numPage) {
+            document.getElementById('page-0').style.display = 'none';
+            for (let i = 1; i <= 12; i++) {
+                const el = document.getElementById('page-' + i);
+                if (el) el.style.display = 'none';
+            }
+
+            if (numPage === 0) {
+                document.getElementById('page-0').style.display = 'flex';
+            } else {
+                document.getElementById('page-' + numPage).style.display = 'block';
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function selectionnerCarreau(element) {
+            if (element.classList.contains('selected')) {
+                element.classList.remove('selected');
+                choixFait--;
+            } else {
+                if (choixFait < 2) {
+                    element.classList.add('selected');
+                    choixFait++;
+                } else {
+                    alert("⚠️ Tu peux choisir maximum 2 cadeaux mon amour ! 😍");
+                }
+            }
+
+            document.getElementById('compteur-choix').innerText = choixFait;
+
+            if (choixFait === 2) {
+                document.getElementById('validation-message').style.display = 'block';
+            } else {
+                document.getElementById('validation-message').style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
